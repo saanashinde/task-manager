@@ -39,12 +39,6 @@ A modern, responsive, and feature-rich task management app built with React, Vit
 
 ---
 
-## 🖥️ Screenshots
-
-> Add screenshots here to showcase the UI on desktop and mobile!
-
----
-
 ## 🛠️ Setup & Usage
 
 1. **Install dependencies:**
