@@ -1,0 +1,111 @@
+.taskItem {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    margin-bottom: 1rem;
+    transition: box-shadow 0.2s, border 0.2s, background 0.2s;
+}
+
+.taskItem.overdue {
+    border: 2px solid #dc3545;
+    background: #fff0f3;
+}
+
+.taskItem:hover {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.taskItem.completed .taskDetails h3 {
+    text-decoration: line-through;
+    color: #888;
+}
+
+.dueDateRow {
+    margin-top: 0.5rem;
+    display: flex;
+    gap: 1.2rem;
+    align-items: center;
+}
+.dueDateLabel {
+    font-size: 0.98rem;
+    color: #1976d2;
+    font-weight: 600;
+}
+.dueStatus {
+    font-size: 0.98rem;
+    font-weight: 600;
+    color: #888;
+    background: #f0f4ff;
+    border-radius: 12px;
+    padding: 0.1rem 0.7rem;
+}
+.overdueText {
+    color: #dc3545;
+    background: #ffeaea;
+}
+
+.taskDetails {
+    flex-grow: 1;
+}
+
+.taskDetails h3 {
+    margin: 0 0 0.5rem;
+}
+
+.taskDetails p {
+    margin: 0;
+    color: #555;
+}
+
+.taskActions {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.taskActions button {
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.completeButton {
+    background-color: #28a745;
+    color: white;
+}
+
+.completeButton:hover {
+    background-color: #218838;
+}
+
+.deleteButton {
+    background-color: #dc3545;
+    color: white;
+}
+
+.deleteButton:hover {
+    background-color: #c82333;
+}
+
+@media (max-width: 600px) {
+    .taskItem {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    .taskActions {
+      margin-top: 1rem;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .taskActions button {
+      flex-grow: 1;
+    }
+}

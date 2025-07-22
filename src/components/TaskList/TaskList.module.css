@@ -1,0 +1,31 @@
+.taskList {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.noTasks {
+    text-align: center;
+    color: #666;
+    margin-top: 2rem;
+}
+
+/* Animation classes for task transitions */
+.taskEnter {
+  opacity: 0;
+  transform: translateY(30px) scale(0.96);
+}
+.taskEnterActive {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+  transition: opacity 0.5s cubic-bezier(.4,0,.2,1), transform 0.5s cubic-bezier(.4,0,.2,1);
+}
+.taskExit {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+.taskExitActive {
+  opacity: 0;
+  transform: translateY(-30px) scale(0.96);
+  transition: opacity 0.4s cubic-bezier(.4,0,.2,1), transform 0.4s cubic-bezier(.4,0,.2,1);
+}
